@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KerBytes Portfolio</title>
 
-    <!-- Add Open Sans font from Google Fonts -->
+    <!-- Added Open Sans font from Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap" rel="stylesheet">
 
-    <!-- Add Bootstrap CSS -->
+    <!-- Added Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-    <!-- Custom CSS for your portfolio -->
+    <!-- Custom CSS for my portfolio -->
     <style>
         /* Background image and body styles */
         body {
@@ -21,62 +21,62 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
             font-family: 'Open Sans', sans-serif;
-            color: #ddd; /* Set text color to dirty white */
+            color: #ddd;
         }
 
         /* Override the Bootstrap navbar styles */
         .navbar {
-            background-color: rgba(51, 51, 51, 0.2); /* Dark gray color with 80% opacity */
+            background-color: rgba(51, 51, 51, 0.2);
         }
 
         .navbar-brand {
             font-weight: bold;
-            font-size: 24px; /* Increase font size */
-            color: #ddd; /* Set text color to dirty white */
+            font-size: 24px;
+            color: #ddd;
         }
 
         .navbar-nav .nav-link {
             font-weight: bold;
-            font-size: 18px; /* Increase font size */
-            margin-right: 20px; /* Add margin between nav links */
-            color: #ddd; /* Set text color to dirty white */
+            font-size: 18px;
+            margin-right: 20px;
+            color: #ddd;
         }
 
         /* Subheaders (section titles) */
         h1 {
             font-size: 2rem;
             margin-bottom: 20px;
-            color: #ddd; /* Set text color to dirty white */
+            color: #ddd;
         }
 
         /* Profile section styles */
         .profile-name {
             font-size: 1.5rem;
             margin-bottom: 20px;
-            color: #c8fdfd; /* Set text color to dirty white */
+            color: #c8fdfd;
         }
 
         .profile-title {
             font-size: 1.1rem;
             margin-bottom: 20px;
-            color: #c8fdfd; /* Set text color to dirty white */
+            color: #c8fdfd;
         }
 
         .profile-description {
             font-size: 1.1rem;
             text-align: justify;
-            color: #ddd; /* Set text color to dirty white */
+            color: #ddd;
         }
 
         /* Custom margin class */
         .custom-margin {
-            margin-bottom: 10px; /* Increase margin */
+            margin-bottom: 10px; /
         }
 
         /* Key skills styles */
         .key-skills {
             font-weight: bold;
-            color: #ddd; /* Set text color to dirty white */
+            color: #ddd;
         }
 
         /* Skills list styles */
@@ -87,15 +87,15 @@
 
         /* Padding for sections */
         section {
-            padding: 30px 0; /* Increase top and bottom padding */
+            padding: 30px 0;
         }
 
         /* Footer styles */
         .footer {
-            background-color: rgba(51, 51, 51, 0.2); /* Dark gray color with 60% opacity */
-            color: #ddd; /* Set text color to dirty white */
+            background-color: rgba(51, 51, 51, 0.2);
+            color: #ddd;
             text-align: center;
-            padding: 20px 0; /* Reduce top and bottom padding */
+            padding: 20px 0;
             width: 100%;
         }
     </style>
@@ -127,13 +127,12 @@
     </div>
 </nav>
 
-<!-- Add some space after the navbar -->
 <div style="height: 40px;"></div>
 
 <!-- Profile Section -->
 <section id="profile">
     <div class="container">
-        <h1 style="margin-bottom: 40px; color: #c8fdfd; font-weight: bold;">Profile</h1> <!-- Custom margin for the <h1> element -->
+        <h1 style="margin-bottom: 40px; color: #c8fdfd; font-weight: bold;">Profile</h1>
         <div class="row">
             <div class="col-md-6 text-center">
                 <div class="profile-name custom-margin" style="font-weight: bold;">
@@ -142,7 +141,7 @@
                 <div class="profile-title custom-margin">
                     Computer Engineer
                 </div>
-                <!-- Add your profile image here -->
+                <!-- Added my profile image here -->
                 <img src="{% static "/../Portfolio/images/me.jpg" %}" alt="Profile Image" class="img-fluid custom-margin rounded-circle img-thumbnail" style="max-width: 400px;">
             </div>
             <div class="col-md-6">
@@ -178,7 +177,7 @@
                 <p class="profile-description key-skills" style="color: #c8fdfd; font-weight: bold;">
                     Here are some of my key skills:
                 </p>
-                <!-- Add your skills descriptions here -->
+                <!-- Added my skills descriptions here -->
                 <ul class="skills-list">
                     <li>
                         <p class="profile-description">
@@ -208,7 +207,7 @@
                 </ul>
             </div>
             <div class="col-md-6">
-                <!-- Add your progress bars here -->
+                <!-- Add my progress bars here -->
                 <div class="progress mb-3">
                     <div class="progress-bar" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"><strong>65%</strong></div>
                 </div>
@@ -229,7 +228,7 @@
     </div>
 </section>
 
-<!-- Contribution Section -->
+
 <!-- Contribution Section -->
 <section id="contribution">
     <div class="container">
@@ -240,7 +239,7 @@
                 <p class="profile-description">
                     <strong>Home Page Projects:</strong> Presented select homepage designs from previous projects, demonstrating proficiency in web design and user experience enhancement.
                 </p>
-                <!-- Add an image placeholder for your contribution -->
+                <!-- Added an image placeholder1 for my contribution -->
                 <img src="{% static "/../Portfolio/images/cont1.jpg" %}" alt="Contribution 1" class="img-fluid rounded" style="width: 240px; height: 240px;">
             </div>
             <!-- Contribution 2 -->
@@ -248,7 +247,7 @@
                 <p class="profile-description">
                     <strong>Webpage Outlines/Design Plans:</strong> Outlined and designed webpage structures, showcasing strategic planning and meticulous design considerations.
                 </p>
-                <!-- Add an image placeholder for your contribution -->
+                <!-- Added an image placeholder2 for my contribution -->
                 <img src="{% static "/../Portfolio/images/cont2.jpg" %}" alt="Contribution 2" class="img-fluid rounded" style="width: 240px; height: 240px;">
             </div>
             <!-- Contribution 3 -->
@@ -256,14 +255,14 @@
                 <p class="profile-description">
                     <strong>Graphics Logo Designs:</strong> Crafted captivating and brand-aligned graphics logos, elevating visual identities with creative flair.
                 </p>
-                <!-- Add an image placeholder for your contribution -->
+                <!-- Added an image placeholder3 for my contribution -->
                 <img src="{% static "/../Portfolio/images/cont3.jpg" %}" alt="Contribution 3" class="img-fluid rounded" style="width: 240px; height: 240px;">
             </div>
         </div>
     </div>
 </section>
 
-<!-- Footer Section (formerly Contact Section) -->
+<!-- Footer Section -->
 <footer class="footer">
     <div class="container">
         <h1 style="color: #c8fdfd; font-weight: bold;">Contact</h1>
@@ -277,12 +276,12 @@
                     </a>
                 </p>
             </div>
-            <!-- Add more contact information if needed -->
+
         </div>
     </div>
 </footer>
 
-<!-- Add Bootstrap and jQuery scripts at the end for functionality -->
+<!-- Added Bootstrap and jQuery scripts at the end for functionality -->
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -290,25 +289,20 @@
 <!-- JavaScript for smooth scrolling -->
 <script>
     $(document).ready(function () {
-        // Add smooth scrolling to all links with a class of 'nav-link'
+        // Added smooth scrolling to all links with a class of 'nav-link'
         $(".nav-link").on('click', function (event) {
-            // Make sure this.hash has a value before overriding default behavior
-            if (this.hash !== "") {
-                // Prevent default anchor click behavior
-                event.preventDefault();
 
-                // Store hash
+            if (this.hash !== "") {
+                event.preventDefault();
                 var hash = this.hash;
 
-                // Using jQuery's animate() method to add smooth page scroll
-                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
                 $('html, body').animate({
                     scrollTop: $(hash).offset().top
                 }, 800, function () {
-                    // Add hash (#) to URL when done scrolling (default click behavior)
+
                     window.location.hash = hash;
                 });
-            } // End if
+            }
         });
     });
 </script>
