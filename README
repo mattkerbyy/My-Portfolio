@@ -20,9 +20,11 @@ I created this project using **PyCharm**, which helped me organize my files and 
 To view or edit the website:
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/mattkerbyy/My-Portfolio.git
-   ```
+
+    ```bash
+    git clone https://github.com/mattkerbyy/My-Portfolio.git
+    ```
+
 2. Open the project folder with your preferred code editor (I used PyCharm).
 3. Open `home.html` in your browser to see the site.
 
