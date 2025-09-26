@@ -1,4 +1,4 @@
-# My Portfolio
+# 📝 My Portfolio 
 
 Welcome to my first GitHub repository and my first ever simple coding project!
 
