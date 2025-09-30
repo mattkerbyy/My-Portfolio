@@ -17,7 +17,7 @@ I created this project using **PyCharm**, which helped me organize my files and 
 
 ## Getting Started
 
-To view the project:
+**To view the project:**
 
 1. Clone the repository:
 
