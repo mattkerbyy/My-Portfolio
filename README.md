@@ -25,7 +25,7 @@ To view or edit the website:
     git clone https://github.com/mattkerbyy/My-Portfolio.git
     ```
 
-2. Open the project folder with your preferred code editor (I used PyCharm).
+2. Open the project folder with your preferred code editor.
 3. Open `home.html` in your browser to see the site.
 
 ## Why I Made This
