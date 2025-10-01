@@ -26,7 +26,7 @@ I created this project using **PyCharm**, which helped me organize my files and 
     ```
 
 2. Open the project folder with your preferred code editor.
-3. Open `home.html` in your browser to see the site.
+3. In your terminal, run `python manage.py runserver` to start the development server and view the site in your browser.
 
 ## Why I Made This
 
