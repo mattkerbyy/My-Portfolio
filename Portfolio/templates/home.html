@@ -1,311 +1,464 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KerBytes Portfolio</title>
 
-    <!-- Added Open Sans font from Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap" rel="stylesheet">
+    <!-- Open Sans font from Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap"
+      rel="stylesheet"
+    />
 
-    <!-- Added Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
 
-    <!-- Custom CSS for my portfolio -->
+    <!-- Custom Stylings -->
     <style>
-        /* Background image and body styles */
-        body {
-            background-image: url('{% static "/../Portfolio/images/background.jpg" %}');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            font-family: 'Open Sans', sans-serif;
-            color: #ddd;
+      /* Background image and body styles */
+      body {
+        /* Dark fallback background color */
+        background-color: #0b0b0b;
+        background-image: url('{% static "Portfolio/images/background.jpg" %}');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        font-family: "Open Sans", sans-serif;
+        color: #ddd;
+      }
+
+      /* Navbar styles */
+      .navbar {
+        background-color: rgba(51, 51, 51, 0.85);
+        backdrop-filter: blur(4px);
+      }
+
+      /* Sticky navbar */
+      .navbar-sticky {
+        position: sticky;
+        top: 0;
+        z-index: 1030;
+      }
+
+      .navbar-brand {
+        font-weight: bold;
+        font-size: 24px;
+        color: #ddd;
+      }
+
+      .navbar-nav .nav-link {
+        font-weight: bold;
+        font-size: 18px;
+        margin-right: 20px;
+        color: #ddd;
+      }
+
+      /* Subheaders (section titles) */
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: #ddd;
+      }
+
+      /* Profile section styles */
+      .profile-name {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        color: #c8fdfd;
+      }
+
+      .profile-title {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+        color: #c8fdfd;
+      }
+
+      .profile-description {
+        font-size: 1.1rem;
+        text-align: justify;
+        color: #ddd;
+      }
+
+      /* Custom margin class */
+      .custom-margin {
+        margin-bottom: 10px;
+      }
+
+      /* Key skills styles */
+      .key-skills {
+        font-weight: bold;
+        color: #ddd;
+      }
+
+      /* Skills list styles */
+      .skills-list {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      /* Padding for sections */
+      section {
+        padding: 30px 0;
+      }
+
+      /* Footer styles */
+      .footer {
+        background-color: rgba(51, 51, 51, 0.2);
+        color: #ddd;
+        text-align: center;
+        padding: 20px 0;
+        width: 100%;
+      }
+
+      /* Background and body styles */
+      html,
+      body {
+        min-height: 100%;
+      }
+
+      /* Responsive image styles */
+      .profile-img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        border-radius: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .contribution-img {
+        width: 100%;
+        max-width: 240px;
+        height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+      }
+
+      /* Smaller screens: scale down profile and contribution images and adjust layout */
+      @media (max-width: 768px) {
+        .profile-img {
+          max-width: 220px;
         }
 
-        /* Override the Bootstrap navbar styles */
-        .navbar {
-            background-color: rgba(51, 51, 51, 0.2);
+        .contribution-img {
+          max-width: 180px;
         }
 
-        .navbar-brand {
-            font-weight: bold;
-            font-size: 24px;
-            color: #ddd;
+        #contribution .col-md-4 {
+          margin-bottom: 20px;
         }
-
-        .navbar-nav .nav-link {
-            font-weight: bold;
-            font-size: 18px;
-            margin-right: 20px;
-            color: #ddd;
-        }
-
-        /* Subheaders (section titles) */
-        h1 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: #ddd;
-        }
-
-        /* Profile section styles */
-        .profile-name {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-            color: #c8fdfd;
-        }
-
-        .profile-title {
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-            color: #c8fdfd;
-        }
-
-        .profile-description {
-            font-size: 1.1rem;
-            text-align: justify;
-            color: #ddd;
-        }
-
-        /* Custom margin class */
-        .custom-margin {
-            margin-bottom: 10px; /
-        }
-
-        /* Key skills styles */
-        .key-skills {
-            font-weight: bold;
-            color: #ddd;
-        }
-
-        /* Skills list styles */
-        .skills-list {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        /* Padding for sections */
-        section {
-            padding: 30px 0;
-        }
-
-        /* Footer styles */
-        .footer {
-            background-color: rgba(51, 51, 51, 0.2);
-            color: #ddd;
-            text-align: center;
-            padding: 20px 0;
-            width: 100%;
-        }
+      }
     </style>
-</head>
-<body>
-
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgba(51, 51, 51, 0.2);">
-    <div class="container">
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-light navbar-sticky"
+      style="background-color: rgba(51, 51, 51, 0.85)"
+    >
+      <div class="container">
         <!-- Portfolio Name on the left -->
-        <a class="navbar-brand" href="#" style="color: #ddd;">KerBytes Portfolio</a>
+        <a class="navbar-brand" href="#" style="color: #ddd"
+          >KerBytes Portfolio</a
+        >
 
         <!-- Navbar items on the right -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#profile" style="color: #ddd;">Profile</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#skills" style="color: #ddd;">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contribution" style="color: #ddd;">Contribution</a>
-                </li>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#profile" style="color: #ddd"
+                >Profile</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills" style="color: #ddd">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contribution" style="color: #ddd"
+                >Contribution</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div style="height: 40px"></div>
+
+    <!-- Profile Section -->
+    <section id="profile">
+      <div class="container">
+        <h1 style="margin-bottom: 40px; color: #c8fdfd; font-weight: bold">
+          Profile
+        </h1>
+        <div class="row">
+          <div class="col-md-6 text-center">
+            <div class="profile-name custom-margin" style="font-weight: bold">
+              Matt Kerby Perez
+            </div>
+            <div class="profile-title custom-margin">Computer Engineer</div>
+            <!-- My profile image here -->
+            <img
+              src="{% static 'Portfolio/images/me.jpg' %}"
+              alt="Profile Image"
+              class="img-fluid custom-margin rounded-circle img-thumbnail profile-img"
+              style="max-width: 400px"
+            />
+          </div>
+          <div class="col-md-6">
+            <p class="profile-description">
+              I am an aspiring student of Computer Engineering with a passion
+              for technology and innovation. My journey in the field of computer
+              engineering began with a fascination for computers and their
+              limitless potential. Over the years, I have honed my skills in
+              hardware and software, constantly seeking to push the boundaries
+              of what is possible.
+            </p>
+            <p class="profile-description">
+              My goal is to contribute to the ever-evolving world of technology
+              by designing and developing cutting-edge solutions that solve
+              real-world problems. I believe in the power of collaboration and
+              continuous learning, and I am committed to staying at the
+              forefront of emerging trends and technologies.
+            </p>
+            <p class="profile-description">
+              Whether it's designing efficient algorithms, optimizing hardware
+              systems, or crafting elegant software solutions, I am dedicated to
+              delivering excellence in every project I undertake. I thrive in
+              challenging environments that require creativity and
+              problem-solving, and I am excited about the endless possibilities
+              that lie ahead in the field of computer engineering.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <div class="container">
+        <h1 style="color: #c8fdfd; font-weight: bold">Skills</h1>
+        <div class="row">
+          <div class="col-md-6">
+            <p
+              class="profile-description key-skills"
+              style="color: #c8fdfd; font-weight: bold"
+            >
+              Here are some of my key skills:
+            </p>
+            <!-- My skills descriptions here -->
+            <ul class="skills-list">
+              <li>
+                <p class="profile-description">
+                  • <strong>HTML:</strong> A solid foundation in HTML with a
+                  proficiency level of 65%.
+                </p>
+              </li>
+              <li>
+                <p class="profile-description">
+                  • <strong>CSS:</strong> Proficient in CSS, with a skill level
+                  of 50%.
+                </p>
+              </li>
+              <li>
+                <p class="profile-description">
+                  • <strong>C++:</strong> Strong programming skills in C++, with
+                  a proficiency level of 70%.
+                </p>
+              </li>
+              <li>
+                <p class="profile-description">
+                  • <strong>Graphics Designing:</strong> Skilled in graphics
+                  designing, with a proficiency level of 70%.
+                </p>
+              </li>
+              <li>
+                <p class="profile-description">
+                  • <strong>Problem-Solving:</strong> Exceptional
+                  problem-solving skills, with a proficiency level of 80%.
+                </p>
+              </li>
             </ul>
+          </div>
+          <div class="col-md-6">
+            <!-- My progress bars here -->
+            <div class="progress mb-3">
+              <div
+                class="progress-bar"
+                role="progressbar"
+                style="width: 65%"
+                aria-valuenow="65"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              >
+                <strong>65%</strong>
+              </div>
+            </div>
+            <div class="progress mb-3">
+              <div
+                class="progress-bar"
+                role="progressbar"
+                style="width: 50%"
+                aria-valuenow="50"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              >
+                <strong>50%</strong>
+              </div>
+            </div>
+            <div class="progress mb-3">
+              <div
+                class="progress-bar"
+                role="progressbar"
+                style="width: 70%"
+                aria-valuenow="70"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              >
+                <strong>70%</strong>
+              </div>
+            </div>
+            <div class="progress mb-3">
+              <div
+                class="progress-bar"
+                role="progressbar"
+                style="width: 70%"
+                aria-valuenow="70"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              >
+                <strong>70%</strong>
+              </div>
+            </div>
+            <div class="progress mb-3">
+              <div
+                class="progress-bar"
+                role="progressbar"
+                style="width: 80%"
+                aria-valuenow="80"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              >
+                <strong>80%</strong>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-</nav>
+      </div>
+    </section>
 
-<div style="height: 40px;"></div>
-
-<!-- Profile Section -->
-<section id="profile">
-    <div class="container">
-        <h1 style="margin-bottom: 40px; color: #c8fdfd; font-weight: bold;">Profile</h1>
-        <div class="row">
-            <div class="col-md-6 text-center">
-                <div class="profile-name custom-margin" style="font-weight: bold;">
-                    Matt Kerby Perez
-                </div>
-                <div class="profile-title custom-margin">
-                    Computer Engineer
-                </div>
-                <!-- Added my profile image here -->
-                <img src="{% static "/../Portfolio/images/me.jpg" %}" alt="Profile Image" class="img-fluid custom-margin rounded-circle img-thumbnail" style="max-width: 400px;">
-            </div>
-            <div class="col-md-6">
-                <p class="profile-description">
-                    I am an aspiring student of Computer Engineering with a passion for technology and innovation.
-                    My journey in the field of computer engineering began with a fascination for computers and their
-                    limitless potential. Over the years, I have honed my skills in hardware and software, constantly
-                    seeking to push the boundaries of what is possible.
-                </p>
-                <p class="profile-description">
-                    My goal is to contribute to the ever-evolving world of technology by designing and developing
-                    cutting-edge solutions that solve real-world problems. I believe in the power of collaboration
-                    and continuous learning, and I am committed to staying at the forefront of emerging trends and
-                    technologies.
-                </p>
-                <p class="profile-description">
-                    Whether it's designing efficient algorithms, optimizing hardware systems, or crafting elegant
-                    software solutions, I am dedicated to delivering excellence in every project I undertake. I thrive
-                    in challenging environments that require creativity and problem-solving, and I am excited about
-                    the endless possibilities that lie ahead in the field of computer engineering.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Skills Section -->
-<section id="skills">
-    <div class="container">
-        <h1 style="color: #c8fdfd; font-weight: bold;">Skills</h1>
-        <div class="row">
-            <div class="col-md-6">
-                <p class="profile-description key-skills" style="color: #c8fdfd; font-weight: bold;">
-                    Here are some of my key skills:
-                </p>
-                <!-- Added my skills descriptions here -->
-                <ul class="skills-list">
-                    <li>
-                        <p class="profile-description">
-                            • <strong>HTML:</strong> A solid foundation in HTML with a proficiency level of 65%.
-                        </p>
-                    </li>
-                    <li>
-                        <p class="profile-description">
-                            • <strong>CSS:</strong> Proficient in CSS, with a skill level of 50%.
-                        </p>
-                    </li>
-                    <li>
-                        <p class="profile-description">
-                            • <strong>C++:</strong> Strong programming skills in C++, with a proficiency level of 70%.
-                        </p>
-                    </li>
-                    <li>
-                        <p class="profile-description">
-                            • <strong>Graphics Designing:</strong> Skilled in graphics designing, with a proficiency level of 70%.
-                        </p>
-                    </li>
-                    <li>
-                        <p class="profile-description">
-                            • <strong>Problem-Solving:</strong> Exceptional problem-solving skills, with a proficiency level of 80%.
-                        </p>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-md-6">
-                <!-- Add my progress bars here -->
-                <div class="progress mb-3">
-                    <div class="progress-bar" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"><strong>65%</strong></div>
-                </div>
-                <div class="progress mb-3">
-                    <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"><strong>50%</strong></div>
-                </div>
-                <div class="progress mb-3">
-                    <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"><strong>70%</strong></div>
-                </div>
-                <div class="progress mb-3">
-                    <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"><strong>70%</strong></div>
-                </div>
-                <div class="progress mb-3">
-                    <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"><strong>80%</strong></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<!-- Contribution Section -->
-<section id="contribution">
-    <div class="container">
-        <h1 style="color: #c8fdfd; font-weight: bold;">Contribution</h1>
+    <!-- Contribution Section -->
+    <section id="contribution">
+      <div class="container">
+        <h1 style="color: #c8fdfd; font-weight: bold">Contribution</h1>
         <!-- Contribution 1 -->
         <div class="row">
-            <div class="col-md-4 text-center">
-                <p class="profile-description">
-                    <strong>Home Page Projects:</strong> Presented select homepage designs from previous projects, demonstrating proficiency in web design and user experience enhancement.
-                </p>
-                <!-- Added an image placeholder1 for my contribution -->
-                <img src="{% static "/../Portfolio/images/cont1.jpg" %}" alt="Contribution 1" class="img-fluid rounded" style="width: 240px; height: 240px;">
-            </div>
-            <!-- Contribution 2 -->
-            <div class="col-md-4 text-center">
-                <p class="profile-description">
-                    <strong>Webpage Outlines/Design Plans:</strong> Outlined and designed webpage structures, showcasing strategic planning and meticulous design considerations.
-                </p>
-                <!-- Added an image placeholder2 for my contribution -->
-                <img src="{% static "/../Portfolio/images/cont2.jpg" %}" alt="Contribution 2" class="img-fluid rounded" style="width: 240px; height: 240px;">
-            </div>
-            <!-- Contribution 3 -->
-            <div class="col-md-4 text-center">
-                <p class="profile-description">
-                    <strong>Graphics Logo Designs:</strong> Crafted captivating and brand-aligned graphics logos, elevating visual identities with creative flair.
-                </p>
-                <!-- Added an image placeholder3 for my contribution -->
-                <img src="{% static "/../Portfolio/images/cont3.jpg" %}" alt="Contribution 3" class="img-fluid rounded" style="width: 240px; height: 240px;">
-            </div>
+          <div class="col-md-4 text-center">
+            <p class="profile-description">
+              <strong>Home Page Projects:</strong> Presented select homepage
+              designs from previous projects, demonstrating proficiency in web
+              design and user experience enhancement.
+            </p>
+            <img
+              src="{% static 'Portfolio/images/cont1.jpg' %}"
+              alt="Contribution 1"
+              class="img-fluid rounded contribution-img"
+            />
+          </div>
+          <div class="col-md-4 text-center">
+            <p class="profile-description">
+              <strong>Webpage Outlines/Design Plans:</strong> Outlined and
+              designed webpage structures, showcasing strategic planning and
+              meticulous design considerations.
+            </p>
+            <img
+              src="{% static 'Portfolio/images/cont2.jpg' %}"
+              alt="Contribution 2"
+              class="img-fluid rounded contribution-img"
+            />
+          </div>
+          <div class="col-md-4 text-center">
+            <p class="profile-description">
+              <strong>Graphics Logo Designs:</strong> Crafted captivating and
+              brand-aligned graphics logos, elevating visual identities with
+              creative flair.
+            </p>
+            <img
+              src="{% static 'Portfolio/images/cont3.jpg' %}"
+              alt="Contribution 3"
+              class="img-fluid rounded contribution-img"
+            />
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- Footer Section -->
-<footer class="footer">
-    <div class="container">
-        <h1 style="color: #c8fdfd; font-weight: bold;">Contact</h1>
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="container">
+        <h1 style="color: #c8fdfd; font-weight: bold">Contact</h1>
         <!-- Contact Information -->
         <div class="row">
-            <div class="col-md-6 offset-md-3 text-center"> <!-- Center align content -->
-                <p class="profile-description">
-                    Curious to learn more about me? Don't hesitate to get in touch using my contact information. I'm open to forging new connections, engaging in meaningful conversations, and exploring exciting opportunities! :
-                    <a href="mailto:mattkerbyy@gmail.com">
-                        &#x1F4E7; mattkerbyy@gmail.com
-                    </a>
-                </p>
-            </div>
-
+          <div class="col-md-6 offset-md-3 text-center">
+            <!-- Center align content -->
+            <p class="profile-description">
+              Curious to learn more about me? Don't hesitate to get in touch
+              using my contact information. I'm open to forging new connections,
+              engaging in meaningful conversations, and exploring exciting
+              opportunities! :
+              <a href="mailto:mattkerbyy@gmail.com">
+                &#x1F4E7; mattkerbyy@gmail.com
+              </a>
+            </p>
+          </div>
         </div>
-    </div>
-</footer>
+      </div>
+    </footer>
 
-<!-- Added Bootstrap and jQuery scripts at the end for functionality -->
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Bootstrap and jQuery scripts at the end for functionality -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-<!-- JavaScript for smooth scrolling -->
-<script>
-    $(document).ready(function () {
-        // Added smooth scrolling to all links with a class of 'nav-link'
-        $(".nav-link").on('click', function (event) {
+    <!-- JavaScript for smooth scrolling -->
+    <script>
+      $(document).ready(function () {
+        $(".nav-link").on("click", function (event) {
+          if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
 
-            if (this.hash !== "") {
-                event.preventDefault();
-                var hash = this.hash;
-
-                $('html, body').animate({
-                    scrollTop: $(hash).offset().top
-                }, 800, function () {
-
-                    window.location.hash = hash;
-                });
-            }
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top,
+              },
+              800,
+              function () {
+                window.location.hash = hash;
+              }
+            );
+          }
         });
-    });
-</script>
-
-</body>
+      });
+    </script>
+  </body>
 </html>
