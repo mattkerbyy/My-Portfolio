@@ -4,7 +4,7 @@ Welcome to my first GitHub repository and my first ever simple coding project!
 
 ## About
 
-This project is a personal portfolio website built with **HTML** and **CSS**. It serves as a showcase of my journey as I begin learning web development and version control with GitHub. 
+This project is a personal portfolio website built with **HTML** and **CSS**. It serves as a showcase of my journey as I begin learning web development and version control with **GitHub**. 
 
 I created this project using **PyCharm**, which helped me organize my files and learn basic coding workflows.
 
@@ -26,7 +26,7 @@ I created this project using **PyCharm**, which helped me organize my files and 
     ```
 
 2. Open the project folder with your preferred code editor.
-3. Open `home.html` in your browser to see the site.
+3. In your terminal, run `python manage.py runserver` to start the development server and view the site in your browser.
 
 ## Why I Made This
 
