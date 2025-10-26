@@ -10,8 +10,6 @@ I created this project using **PyCharm**, which helped me organize my files and 
 
 ## Preview
 
-Below are two screenshots of the site preview. You can view them here or on GitHub by navigating to the `Portfolio/images/assets-preview` folder.
-
 ![Web preview 1](Portfolio/images/assets-preview/web-preview.png)
 
 ![Web preview 2](Portfolio/images/assets-preview/web-preview-2.png)
