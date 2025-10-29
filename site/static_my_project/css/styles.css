@@ -1,0 +1,101 @@
+/* Extracted from Portfolio/templates/home.html */
+
+/* Background image and body styles */
+body {
+    /* Dark fallback color in case background image fails to load */
+    background-color: #0b0b0b;
+    background-image: url('/static/Portfolio/images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Open Sans', sans-serif;
+    color: #ddd;
+}
+
+/* Override the Bootstrap navbar styles and make it sticky */
+.navbar {
+    background-color: rgba(51, 51, 51, 0.85); /* stronger background for readability when sticky */
+    backdrop-filter: blur(4px); /* subtle blur behind navbar for contrast */
+}
+
+/* Sticky navbar */
+.navbar-sticky {
+    position: sticky;
+    top: 0;
+    z-index: 1030; /* above page content but below modals */
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 24px;
+    color: #ddd;
+}
+
+.navbar-nav .nav-link {
+    font-weight: bold;
+    font-size: 18px;
+    margin-right: 20px;
+    color: #ddd;
+}
+
+/* Subheaders (section titles) */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ddd;
+}
+
+/* Profile section styles */
+.profile-name {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #c8fdfd;
+}
+
+.profile-title {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #c8fdfd;
+}
+
+.profile-description {
+    font-size: 1.1rem;
+    text-align: justify;
+    color: #ddd;
+}
+
+/* Custom margin class */
+.custom-margin {
+    margin-bottom: 10px;
+}
+
+/* Key skills styles */
+.key-skills {
+    font-weight: bold;
+    color: #ddd;
+}
+
+/* Skills list styles */
+.skills-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* Padding for sections */
+section {
+    padding: 30px 0;
+}
+
+/* Footer styles */
+.footer {
+    background-color: rgba(51, 51, 51, 0.2);
+    color: #ddd;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+/* Ensure body at least fills viewport so background covers fully */
+html, body {
+    min-height: 100%;
+}
