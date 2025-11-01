@@ -10,9 +10,9 @@ I created this project using **PyCharm**, which helped me organize my files and 
 
 ## Preview
 
-![Web preview 1](Portfolio/images/assets-preview/web-preview.png)
+![Web preview 1](Portfolio/images/githubPreview/web-preview.png)
 
-![Web preview 2](Portfolio/images/assets-preview/web-preview-2.png)
+![Web preview 2](Portfolio/images/githubPreview/web-preview-2.png)
 
 ## Features
 
