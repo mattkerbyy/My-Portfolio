@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,12 +9,12 @@
     <!-- Favicon -->
     <link
       rel="shortcut icon"
-      href="/images/favicon/matt-kerby-logo.ico"
+      href="{% static 'Portfolio/images/favicon/matt-kerby-logo.ico' %}"
       type="image/x-icon"
     />
     <link
       rel="icon"
-      href="/images/favicon/matt-kerby-logo.ico"
+      href="{% static 'Portfolio/images/favicon/matt-kerby-logo.ico' %}"
       type="image/x-icon"
     />
 
@@ -35,7 +36,7 @@
       body {
         /* Dark fallback background color */
         background-color: #0b0b0b;
-        background-image: url("/images/background.jpg");
+        background-image: url('{% static "Portfolio/images/background.jpg" %}');
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -230,7 +231,7 @@
             <div class="profile-title custom-margin">Computer Engineer</div>
             <!-- My profile image -->
             <img
-              src="/images/me.jpg"
+              src="{% static 'Portfolio/images/me.jpg' %}"
               alt="Profile Image"
               class="img-fluid custom-margin rounded-circle img-thumbnail profile-img"
               style="max-width: 400px"
@@ -391,7 +392,7 @@
               design and user experience enhancement.
             </p>
             <img
-              src="/images/cont1.jpg"
+              src="{% static 'Portfolio/images/cont1.jpg' %}"
               alt="Contribution 1"
               class="img-fluid rounded contribution-img"
             />
@@ -404,7 +405,7 @@
               meticulous design considerations.
             </p>
             <img
-              src="/images/cont2.jpg"
+              src="{% static 'Portfolio/images/cont2.jpg' %}"
               alt="Contribution 2"
               class="img-fluid rounded contribution-img"
             />
@@ -417,7 +418,7 @@
               creative flair.
             </p>
             <img
-              src="/images/cont3.jpg"
+              src="{% static 'Portfolio/images/cont3.jpg' %}"
               alt="Contribution 3"
               class="img-fluid rounded contribution-img"
             />
