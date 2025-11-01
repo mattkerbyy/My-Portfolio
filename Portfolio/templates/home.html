@@ -1,4 +1,3 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,9 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KerBytes Portfolio</title>
 
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="{% static 'Portfolio/images/favicon/matt-kerby-logo.ico' %}" type="image/x-icon" />
-  <link rel="icon" href="{% static 'Portfolio/images/favicon/matt-kerby-logo.ico' %}" type="image/x-icon" />
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="/images/favicon/matt-kerby-logo.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="icon"
+      href="/images/favicon/matt-kerby-logo.ico"
+      type="image/x-icon"
+    />
 
     <!-- Open Sans font from Google Fonts -->
     <link
@@ -28,7 +35,7 @@
       body {
         /* Dark fallback background color */
         background-color: #0b0b0b;
-        background-image: url('{% static "Portfolio/images/background.jpg" %}');
+        background-image: url("/images/background.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -223,7 +230,7 @@
             <div class="profile-title custom-margin">Computer Engineer</div>
             <!-- My profile image -->
             <img
-              src="{% static 'Portfolio/images/me.jpg' %}"
+              src="/images/me.jpg"
               alt="Profile Image"
               class="img-fluid custom-margin rounded-circle img-thumbnail profile-img"
               style="max-width: 400px"
@@ -274,31 +281,31 @@
             <ul class="skills-list">
               <li>
                 <p class="profile-description">
-                  • <strong>HTML:</strong> A solid foundation in HTML with a
-                  proficiency level of 65%.
+                  &bull; <strong>HTML:</strong> A solid foundation in HTML with
+                  a proficiency level of 65%.
                 </p>
               </li>
               <li>
                 <p class="profile-description">
-                  • <strong>CSS:</strong> Proficient in CSS, with a skill level
-                  of 50%.
+                  &bull; <strong>CSS:</strong> Proficient in CSS, with a skill
+                  level of 50%.
                 </p>
               </li>
               <li>
                 <p class="profile-description">
-                  • <strong>C++:</strong> Strong programming skills in C++, with
-                  a proficiency level of 70%.
+                  &bull; <strong>C++:</strong> Strong programming skills in C++,
+                  with a proficiency level of 70%.
                 </p>
               </li>
               <li>
                 <p class="profile-description">
-                  • <strong>Graphics Designing:</strong> Skilled in graphics
-                  designing, with a proficiency level of 70%.
+                  &bull; <strong>Graphics Designing:</strong> Skilled in
+                  graphics designing, with a proficiency level of 70%.
                 </p>
               </li>
               <li>
                 <p class="profile-description">
-                  • <strong>Problem-Solving:</strong> Exceptional
+                  &bull; <strong>Problem-Solving:</strong> Exceptional
                   problem-solving skills, with a proficiency level of 80%.
                 </p>
               </li>
@@ -384,7 +391,7 @@
               design and user experience enhancement.
             </p>
             <img
-              src="{% static 'Portfolio/images/cont1.jpg' %}"
+              src="/images/cont1.jpg"
               alt="Contribution 1"
               class="img-fluid rounded contribution-img"
             />
@@ -397,7 +404,7 @@
               meticulous design considerations.
             </p>
             <img
-              src="{% static 'Portfolio/images/cont2.jpg' %}"
+              src="/images/cont2.jpg"
               alt="Contribution 2"
               class="img-fluid rounded contribution-img"
             />
@@ -410,7 +417,7 @@
               creative flair.
             </p>
             <img
-              src="{% static 'Portfolio/images/cont3.jpg' %}"
+              src="/images/cont3.jpg"
               alt="Contribution 3"
               class="img-fluid rounded contribution-img"
             />
